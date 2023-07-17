@@ -1,0 +1,31 @@
+﻿@model AppVitalSignMonitor.Models.Usuario
+@{
+    Layout = null; // Se coloca "Layout = null" para que no aparezca en el Layout principal.
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <form asp-controller="Autenticacion" asp-action="Login" method="POST">
+                <div class="mb-3">
+                    <label class="form-label" asp-for="NombreUsuario">Nombre de Usuario</label>
+                    <input type="text" class="form-control" asp-for="NombreUsuario" >
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Contrasena">Contraseña</label>
+                    <input type="password" class="form-control" asp-for="Contrasena">
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </form>
+        </div>
+    </div> 
+</body>
+</html>
